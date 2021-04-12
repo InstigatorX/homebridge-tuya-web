@@ -131,6 +131,18 @@
               ],
               "required": true
             },
+            "max_brightness": {
+              "title": "Device max brightness",
+              "type": "number",
+              "default": 255,
+              "description": "Dimmer lights might have different maximum value, find it and set it here"
+            },
+            "min_brightness": {
+              "title": "Device min brightness",
+              "type": "number",
+              "default": 1,
+              "description": "Dimmer lights might have different minimum value, find it and set it here"
+            },
             "min_temper": {
               "title": "Minimal Temperature",
               "type": "string",
@@ -259,6 +271,18 @@
           "items": [
             {
               "key": "defaults[].id"
+            },
+            {
+              "key": "defaults[].max_brightness",
+              "condition": {
+                "functionBody": "return (model.defaults[arrayIndices].device_type == 'dimmer')"
+              }
+            },
+            {
+              "key": "defaults[].min_brightness",
+              "condition": {
+                "functionBody": "return (model.defaults[arrayIndices].device_type == 'dimmer')"
+              }
             },
             {
               "key": "defaults[].device_type"
