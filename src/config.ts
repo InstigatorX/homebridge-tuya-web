@@ -5,6 +5,8 @@ import { TuyaDeviceType } from "./api/response";
 export type TuyaDeviceDefaults = {
   id: string;
   device_type: TuyaDeviceType;
+  max_brightness: number;
+  min_brightness: number;
   min_temper: string | number;
   max_temper: string | number;
   current_temperature_factor: string | number;
