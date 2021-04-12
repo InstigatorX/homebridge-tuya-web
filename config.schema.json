@@ -1,5 +1,5 @@
 {
-  "pluginAlias": "TuyaWebPlatform",
+  "pluginAlias": "TuyaWebPlatformIX",
   "pluginType": "platform",
   "singular": true,
   "headerDisplay": "Homebridge plugin for devices using the Tuya Web API.",
@@ -11,7 +11,7 @@
         "title": "Name",
         "type": "string",
         "required": true,
-        "default": "TuyaWebPlatform",
+        "default": "TuyaWebPlatformIX",
         "description": "You shouldn't need to change this."
       },
       "options": {
